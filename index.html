@@ -3,57 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduCakn - Educador Caninomada</title>
+    <title>EducKN</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="imagenes/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="imagenes/logopng.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="top-bar">
             <div class="contact-info">
-                <a href="tel:+5491132548063"><i class="fas fa-phone"></i> +54 9 11 3254-8063</a>
-                <a href="mailto:vallejosnico22@gmail.com"><i class="fas fa-envelope"></i> vallejosnico22@gmail.com</a>
+                <a href="tel:+5491132548063"><i class="fa fa-phone"></i> +54 9 11 3254-8063</a>
+                <a href="tel:+5491133778532"><i class="fa fa-phone"></i> +54 9 11 3778-8532</a>
+                <a href="mailto:vallejosnico22@gmail.com"><i class="fa fa-envelope"></i> vallejosnico22@gmail.com</a>
             </div>
             <div class="social-icons">
-                <a href="#" class="social-icon"></a>
-                <a href="#" class="social-icon"></a>
-                <a href="#" class="social-icon"></a>
-                <a href="#" class="social-icon"></a>
+                <a href="https://www.instagram.com/vallejosnico22/" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://www.tiktok.com/@nico_vallejos_educkn" target="_blank" class="social-icon" aria-label="TikTok">
+                    <i class="fab fa-tiktok fa-lg"></i>
+                </a>
+                <a href="https://www.youtube.com/@VallejosNico22EducKN" target="_blank" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+                <a href="https://wa.me/5491132548063" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp fa-lg"></i>
+                </a>
             </div>
         </div>
         <nav class="main-nav">
             <div class="logo">
-                <h1 class="logo-text">EduCakn</h1>
+                <h1 class="logo-text">EducKN</h1>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="#" class="active">INICIO</a></li>
-                <li><a href="#">SERVICIOS</a></li>
-                <li><a href="#">CURSO DE ADIESTRAMIENTO</a></li>
-                <li><a href="#">ETOLOGÍA</a></li>
-                <li><a href="#">PERROS NATU ELITE</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">QUIÉNES SOMOS</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#main-section">INICIO</a></li>
+                <li><a class="inactive-button" href="#services-section">SERVICIOS</a></li>
+                <li><a class="inactive-button" href="#blog-section">BLOG</a></li>
+                <li><a class="inactive-button" href="#about-section">QUIEN SOY</a></li>
+                <li><a href="#contact-section">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-section">
         <section class="hero">
             <div class="hero-content">
                 <div class="logo-large">
-                    <h1 class="logo-text-large">EduCakn</h1>
+                    <h1 class="logo-text-large">EducKN</h1>
                 </div>
                 <h1>EDUCADOR CANINOMADA</h1>
-                <a href="tel:+5491132548063" class="cta-button">+54 9 11 3254-8063</a>
+                <div class="phone-number-button">
+                    <a href="tel:+5491132548063" class="cta-button">+54 9 11 3254-8063</a>                
+                    <a href="tel:+5491133778532" class="cta-button">+54 9 11 3778-8532</a>
+                </div>
             </div>
         </section>
 
-        <section class="content">
+        <section class="content" id="contact-section">
             <h2>Educador Caninomada</h2>
             <div class="main-content">
                 <div class="text-content">
@@ -61,7 +70,6 @@
                     <p>Como educador canino, mi misión es ayudarte a entender mejor a tu compañero de cuatro patas y fortalecer el vínculo entre ustedes. ¿No queremos que mejore su salud mental y física, que sepa comportarse adecuadamente y que haya una comunicación efectiva entre ambos?</p>
                     <p>Me dedico a viajar por diferentes lugares, compartiendo mi conocimiento y experiencia en educación canina positiva, ayudando a perros y sus familias a construir una relación más armoniosa y feliz.</p>
                     <p>SIEMPRE utilizando métodos positivos y respetuosos en la educación canina.</p>
-                    <a href="tel:+5491132548063" class="cta-button">+54 9 11 3254-8063</a>
                 </div>
                 <div class="contact-form">
                     <form>
@@ -87,10 +95,6 @@
                         </div>
                         <div class="form-group">
                             <textarea placeholder="Mensaje (requerido)" required></textarea>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="privacy" required>
-                            <label for="privacy">Confirmo que he leído y acepto la Política de privacidad de NobleCan</label>
                         </div>
                         <button type="submit" class="submit-button">Enviar</button>
                     </form>

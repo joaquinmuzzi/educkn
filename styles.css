@@ -26,6 +26,9 @@ header {
 }
 
 .top-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 10px 20px;
@@ -50,14 +53,28 @@ header {
 }
 
 .social-icon {
-    width: 20px;
-    height: 20px;
-    background-color: var(--white);
-    border-radius: 50%;
+    color: var(--white);
+    font-size: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.social-icon i {
+    color: var(--white);
+    display: block;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
 }
 
 .main-nav {
-    padding: 15px 20px;
+    padding: 5px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,6 +188,7 @@ header {
 
 .text-content p {
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 /* Form Styles */
@@ -290,4 +308,45 @@ header {
 .social-icons i {
     font-size: 18px;
     color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons .social-icon {
+    color: var(--white);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-icons .social-icon i {
+    display: block;
+    color: var(--white);
+}
+
+.social-icons .social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}   
+.phone-number-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.inactive-button {
+    pointer-events: none;
+    opacity: 0.6;
 }
