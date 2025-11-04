@@ -18,6 +18,13 @@ body {
 }
 
 /* Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 .top-bar {
     background-color: var(--primary-color);
     color: var(--white);
@@ -32,6 +39,9 @@ body {
     text-decoration: none;
     margin-right: 20px;
     font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .social-icons {
@@ -81,7 +91,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://noblecan.com/wp-content/uploads/2019/05/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/logo.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -91,6 +101,7 @@ body {
     justify-content: center;
     text-align: center;
     color: var(--white);
+    overflow: hidden;
 }
 
 .hero::before {
@@ -109,11 +120,16 @@ body {
 }
 
 .logo-text-large {
-    font-size: 48px;
+    font-size: 72px;
     color: var(--white);
     font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
 }
+
+
 
 .hero h1 {
     font-size: 36px;
@@ -208,13 +224,70 @@ body {
     background-color: #45a049;
 }
 
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-content {
         grid-template-columns: 1fr;
     }
     
+    .main-nav {
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 999;
     }
+    
+    .nav-links.active {
+        display: flex !important;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-info a {
+        margin-bottom: 5px;
+    }
+}
+
+/* Icon Styles */
+.contact-info i {
+    margin-right: 8px;
+}
+
+.social-icons i {
+    font-size: 18px;
+    color: var(--primary-color);
 }
