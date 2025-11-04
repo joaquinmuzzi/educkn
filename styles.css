@@ -88,7 +88,7 @@ header {
 .nav-links a.active {
     color: var(--primary-color);
 }
-
+/* End Header Styles */
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/logo.jpg');
