@@ -25,10 +25,9 @@ header {
     z-index: 1000;
 }
 
-.top-bar {
-    position: fixed;
+.footer {
+    position: sticky;
     bottom: 0;
-    width: 100%;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 10px 20px;
